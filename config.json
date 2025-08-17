@@ -1,0 +1,12 @@
+{
+  "detection_thresholds": {
+    "icmp_flood_threshold": 20,
+    "syn_scan_threshold": 15,
+    "half_open_timeout": 10
+  },
+  "log_settings": {
+    "log_file_csv": "logs/alerts.csv",
+    "log_file_json": "logs/alerts.json"
+  },
+  "network_interface": null
+}
