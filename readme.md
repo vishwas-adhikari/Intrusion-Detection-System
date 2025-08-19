@@ -35,8 +35,8 @@ This tool serves as a proof-of-concept for monitoring network traffic (live or f
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshot/nids1.png" alt="NIDS Screenshot 1" width="45%"/>
-  <img src="screenshot/nids2.png" alt="NIDS Screenshot 2" width="45%"/>
+  <img src="screenshots/nids1.png" alt="NIDS Screenshot 1" width="45%"/>
+  <img src="screenshots/nids2.png" alt="NIDS Screenshot 2" width="45%"/>
 </p>
 
 <p align="center">
