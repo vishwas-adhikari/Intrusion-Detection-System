@@ -1,59 +1,51 @@
 # core/alerting.py
 import csv
 import json
+import os
 from datetime import datetime
-
-"""
-This module handles alerting and logging for the IDS.
-It prints alerts to the console and optionally writes them to CSV and JSON logs.
-"""
+from core.state import detection_state
 
 def log_alert(config, alert_type, src_ip, dst_ip, details):
     """
-    Logs an intrusion detection alert.
-
-    Args:
-        config (dict): IDS configuration dictionary containing log file settings.
-        alert_type (str): Type of alert (e.g., "ICMP Flood", "SYN Scan").
-        src_ip (str): Source IP address of the suspicious traffic.
-        dst_ip (str): Destination IP address of the suspicious traffic.
-        details (str): Additional details about the alert.
-
-    Behavior:
-        - Prints the alert to the console.
-        - Appends the alert to a CSV log file (if configured).
-        - Appends the alert to a JSON log file (if configured).
+    Formats an alert, prints it, updates the summary, and logs it to files.
     """
     timestamp = datetime.now()
+    timestamp_str = timestamp.strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
 
-    # Format the alert message
+    # Pretty console alert
     alert_message = (
-        f"[{timestamp.strftime('%Y-%m-%d %H:%M:%S')}] "
-        f"ALERT: {alert_type} from {src_ip} to {dst_ip} - {details}"
+        f"\n[ALERT] {alert_type}\n"
+        f"  Time       : {timestamp_str}\n"
+        f"  Source IP  : {src_ip}\n"
+        f"  Dest IP    : {dst_ip}\n"
+        f"  Details    : {details}\n"
     )
-
-    # Print alert to console
     print(alert_message)
 
-    # --- Log to CSV ---
+    # This is a critical step for the summary report.
+    detection_state["alert_summary"][alert_type] += 1
+
+    # --- CSV Logging ---
     try:
-        with open(config['log_settings']['log_file_csv'], 'a', newline='') as f:
+        csv_file_path = config['log_settings']['log_file_csv']
+        csv_header = ['Timestamp', 'Alert Type', 'Source IP', 'Destination IP', 'Details']
+        file_exists = os.path.exists(csv_file_path)
+        is_empty = not file_exists or os.path.getsize(csv_file_path) == 0
+
+        with open(csv_file_path, 'a', newline='', encoding="utf-8") as f:
             writer = csv.writer(f)
-            writer.writerow([timestamp, alert_type, src_ip, dst_ip, details])
+            if is_empty:
+                writer.writerow(csv_header)
+            writer.writerow([timestamp_str, alert_type, src_ip, dst_ip, details])
     except IOError as e:
         print(f"[ERROR] Could not write to CSV log file: {e}")
 
-    # --- Log to JSON ---
-    alert_data = {
-        'timestamp': str(timestamp),
-        'type': alert_type,
-        'src_ip': src_ip,
-        'dst_ip': dst_ip,
-        'details': details
-    }
+    # --- JSON Logging ---
     try:
-        with open(config['log_settings']['log_file_json'], 'a') as f:
+        json_file_path = config['log_settings']['log_file_json']
+        alert_data = {'timestamp': timestamp_str, 'type': alert_type, 'src_ip': src_ip, 'dst_ip': dst_ip, 'details': details}
+        with open(json_file_path, 'a', encoding="utf-8") as f:
             json.dump(alert_data, f)
-            f.write('\n')  # Ensure each alert is on a new line
+            f.write('\n')
     except IOError as e:
         print(f"[ERROR] Could not write to JSON log file: {e}")

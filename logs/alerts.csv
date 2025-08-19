@@ -1,0 +1,34 @@
+2025-08-19 17:42:10.593237,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:42:11.597667,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:42:12.616819,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:42:13.626850,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:45:17.602,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:45:18.610,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:45:19.625,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:45:20.640,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:49:57.211,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:49:58.229,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:49:59.243,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:50:00.255,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:53:08.610,SYN Scan Detected,127.0.0.1,127.0.0.1,"Detected scan on 16 ports within a 60-second window. (e.g., ports [23, 25, 53, 80, 110])"
+2025-08-19 17:54:16.714,SYN Scan Detected,127.0.0.1,127.0.0.1,"Detected scan on 16 ports within a 60-second window. (e.g., ports [25, 53, 80, 143, 256])"
+2025-08-19 17:54:58.184,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:54:58.216,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:54:58.310,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 17:55:00.056,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:00.088,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:00.181,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 17:55:01.927,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:01.959,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:02.054,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 17:55:05.320,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:05.351,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:05.445,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 17:55:07.196,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:07.226,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 17:55:07.318,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 18:01:30.869,SYN Scan Detected,127.0.0.1,127.0.0.1,"Detected scan on 16 ports within a 60-second window. (e.g., ports [21, 25, 53, 139, 199])"
+2025-08-19 18:01:38.081,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 18:01:38.113,ICMP Ping Detected,127.0.0.1,127.0.0.1,ICMP Echo Request
+2025-08-19 18:01:38.204,NULL Scan Detected,127.0.0.1,127.0.0.1,NULL scan packet to port 135
+2025-08-19 18:02:22.243,SYN Scan Detected,127.0.0.1,127.0.0.1,"Detected scan on 16 ports within a 60-second window. (e.g., ports [21, 25, 53, 110, 111])"

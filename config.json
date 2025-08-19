@@ -1,8 +1,8 @@
 {
   "detection_thresholds": {
     "icmp_flood_threshold": 20,
-    "syn_scan_threshold": 15,
-    "half_open_timeout": 10
+    "syn_scan_port_threshold": 15,
+    "port_scan_window": 60
   },
   "log_settings": {
     "log_file_csv": "logs/alerts.csv",
