@@ -40,8 +40,8 @@ This tool serves as a proof-of-concept for monitoring network traffic (live or f
 </p>
 
 <p align="center">
-  <img src="screenshot/nids3.png" alt="NIDS Screenshot 3" width="45%"/>
-  <img src="screenshot/nids4.png" alt="NIDS Screenshot 4" width="45%"/>
+  <img src="screenshots/nids3.png" alt="NIDS Screenshot 3" width="45%"/>
+  <img src="screenshots/nids4.png" alt="NIDS Screenshot 4" width="45%"/>
 </p>
 
 ---
